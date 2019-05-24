@@ -37,3 +37,6 @@ atlassian-ide-plugin.xml
 .classpath
 .project
 .settings
+
+# Demo polling directories
+data/
