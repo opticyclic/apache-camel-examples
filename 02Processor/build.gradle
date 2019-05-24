@@ -1,0 +1,7 @@
+apply plugin: 'java'
+
+dependencies {
+  compile "org.apache.camel:camel-core:$camel_version"
+
+  runtime "ch.qos.logback:logback-classic:$logback_version"
+}
