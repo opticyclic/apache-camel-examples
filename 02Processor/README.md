@@ -18,3 +18,11 @@ Doing `exchange.getOut().setBody(body + newContent)` will create a whole new mes
 The filename will also be lost and a generic name based on the message will be used instead.
 
 See [the documentation](https://camel.apache.org/using-getin-or-getout-methods-on-exchange.html) for further explanation.
+
+## Testing
+
+This demo also introduces 2 different tests.
+
+`TextProcessorTest` uses mocks and a `direct` route to isolate the Processor from file activities.
+
+`TextRouteTest` tests the real route. Temporary files are used to keep the tests clean.
