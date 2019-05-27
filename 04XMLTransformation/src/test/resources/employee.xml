@@ -1,0 +1,13 @@
+<employee>
+  <id>1</id>
+  <firstName>Montgomery</firstName>
+  <lastName>Burns</lastName>
+  <address>
+    <addressLine1>1000 Mammon Lane</addressLine1>
+    <city>Springfield</city>
+    <state>DC</state>
+    <postalCode>1000</postalCode>
+    <country>US</country>
+  </address>
+  <position>CEO</position>
+</employee>
