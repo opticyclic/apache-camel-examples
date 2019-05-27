@@ -2,6 +2,10 @@
 
 This builds on the [CSV To JSON](../03CsvToJson/README.md) and [Processor](../02Processor/README.md) demos to process XML, transform the model and convert to JSON.
 
+* The XML is read into an object with JAXB
+* A processor converts it into a simple DTO
+* The DTO is converted into JSON using Jackson
+
 ## JAXB Generation
 
 The JAXB classes are generated from the XSD using a gradle plugin `org.unbroken-dome.xjc` which automatically picks up the XSD from the `src/main/schema` directory.
