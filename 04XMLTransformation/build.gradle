@@ -35,6 +35,8 @@ xjcGenerate {
 
   //Generate toString() methods
   extraArgs = [
+    '-Xequals',
+    '-XhashCode',
     '-XtoString',
     '-XtoString-toStringStrategyClass=com.github.opticyclic.xml.SimpleToStringStrategy'
   ]
