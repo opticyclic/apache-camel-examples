@@ -10,3 +10,13 @@ e.g. there is a mix of Spring XML and JavaConfig and several different ways to s
 This project aims to extract out some of the more basic examples as an introduction to how Camel works.
 
 This project will use gradle instead of maven that the main Camel repo uses.
+
+## Demos
+
+The demos gradually build on each other getting more complex.
+
+* [File Transfer Demo](01FileTransfer/README.md) - Copies files from one directory to another
+* [Processor Demo](02Processor/README.md) - Adds a processor to modify the message along the way
+* [CSV To JSON Demo](03CsvToJson/README.md) - Converts from CSV to JSON
+* [XML Transformation Demo](04XMLTransformation/README.md) - Reads an XML file with JAXB, transforms to a new model and converts to JSON
+* [POST JSON Demo](05PostJson/README.md) - Same as XML Transformation but POSTs the response to a REST API
