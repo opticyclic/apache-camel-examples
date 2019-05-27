@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+dependencies {
+  compile project(':04XMLTransformation')
+  compile "org.apache.camel:camel-http4:$camel_version"
+
+  runtime "ch.qos.logback:logback-classic:$logback_version"
+
+  // Test dependencies
+  testCompile "org.testng:testng:$testng_version"
+  testCompile "org.apache.camel:camel-testng:$camel_version"
+}
