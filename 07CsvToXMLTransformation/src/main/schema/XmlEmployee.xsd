@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="XmlEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="firstName"/>
+        <xs:element type="xs:string" name="lastName"/>
+        <xs:element name="address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="addressLine1"/>
+              <xs:element type="xs:string" name="addressLine2"/>
+              <xs:element type="xs:string" name="city"/>
+              <xs:element type="xs:string" name="state"/>
+              <xs:element type="xs:string" name="postalCode"/>
+              <xs:element type="xs:string" name="country"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="position"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

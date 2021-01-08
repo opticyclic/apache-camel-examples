@@ -1,0 +1,57 @@
+buildscript {
+  ext {
+    jaxb2_basics_version = '0.11.1'
+  }
+
+  repositories { jcenter() }
+  dependencies {
+    classpath 'org.unbroken-dome.gradle-plugins:gradle-xjc-plugin:1.4.2'
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.unbroken-dome.xjc'
+
+dependencies {
+  compile "org.apache.camel:camel-core:$camel_version"
+  compile "org.apache.camel:camel-bindy:$camel_version"
+  compile "org.apache.camel:camel-jaxb:$camel_version"
+  compile "org.apache.camel:camel-jackson:$camel_version"
+
+  //Necessary for JAXB/xjc to generate toString methods
+  xjcClasspath "org.jvnet.jaxb2_commons:jaxb2-basics:$jaxb2_basics_version"
+  compile "org.jvnet.jaxb2_commons:jaxb2-basics-runtime:$jaxb2_basics_version"
+
+  runtime "ch.qos.logback:logback-classic:$logback_version"
+
+  // Test dependencies
+  testCompile "org.testng:testng:$testng_version"
+  testCompile "org.apache.camel:camel-testng:$camel_version"
+  testCompile "com.google.guava:guava:22.0"
+
+}
+
+//Compile the XSD
+xjcGenerate {
+
+  //Don't run during the configuration phase otherwise
+  //the generated classes will be deleted unexpectedly
+  doFirst {
+    //Delete the directory first so we don't have classes removed from the schema left over
+    String packagePath = targetPackage.replace(".", "/")
+    File fullPath = new File(outputDirectory, packagePath)
+    fullPath.deleteDir()
+  }
+
+  //Generate the classes in the main source code
+  outputDirectory = file('src/main/java')
+  targetPackage = 'com.github.opticyclic.camel.model'
+
+  //Generate toString() methods
+  extraArgs = [
+    '-Xequals',
+    '-XhashCode',
+    '-XtoString',
+    '-XtoString-toStringStrategyClass=com.github.opticyclic.xml.SimpleToStringStrategy'
+  ]
+}

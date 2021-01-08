@@ -21,3 +21,4 @@ The demos gradually build on each other getting more complex.
 * [XML Transformation Demo](04XMLTransformation/README.md) - Reads an XML file with JAXB, transforms to a new model and converts to JSON
 * [POST JSON Demo](05PostJson/README.md) - Same as XML Transformation but POSTs the response to a REST API
 * [Date Format Demo](06DateFormat/README.md) - Shows how to modify date formats using Jackson
+* [CSV To XML Demo](07CsvToXMLTransformation/README.md) - Combines previous examples to convert from CSV to XML using Camel Bindy
