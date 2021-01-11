@@ -1,17 +1,29 @@
+
 package com.github.opticyclic.camel.model;
 
-import javax.xml.bind.annotation.*;
-
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import com.github.opticyclic.xml.SimpleToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.lang.Equals2;
+import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
+import org.jvnet.jaxb2_commons.lang.HashCode2;
+import org.jvnet.jaxb2_commons.lang.HashCodeStrategy2;
+import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb2_commons.lang.JAXBHashCodeStrategy;
+import org.jvnet.jaxb2_commons.lang.ToString2;
+import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
+
 /**
  * <p>Java class for anonymous complex type.
- *
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- *
+ * 
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -41,16 +53,19 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-  "firstName",
-  "lastName",
-  "address",
-  "position"
+    "firstName",
+    "lastName",
+    "address",
+    "position"
 })
 @XmlRootElement(name = "XmlEmployee")
-public class XmlEmployee implements Equals2, HashCode2, ToString2 {
+public class XmlEmployee implements Equals2, HashCode2, ToString2
+{
 
     @XmlElement(required = true)
     protected String firstName;
@@ -63,9 +78,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the firstName property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFirstName() {
         return firstName;
@@ -73,9 +90,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the firstName property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setFirstName(String value) {
         this.firstName = value;
@@ -83,9 +102,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the lastName property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLastName() {
         return lastName;
@@ -93,9 +114,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the lastName property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLastName(String value) {
         this.lastName = value;
@@ -103,9 +126,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the address property.
-     *
-     * @return possible object is
-     * {@link Address }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Address }
+     *     
      */
     public Address getAddress() {
         return address;
@@ -113,9 +138,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the address property.
-     *
-     * @param value allowed object is
-     * {@link Address }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Address }
+     *     
      */
     public void setAddress(Address value) {
         this.address = value;
@@ -123,9 +150,11 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the position property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPosition() {
         return position;
@@ -133,28 +162,30 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the position property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setPosition(String value) {
         this.position = value;
     }
 
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
-        if((object == null) || (this.getClass() != object.getClass())) {
+        if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
-        if(this == object) {
+        if (this == object) {
             return true;
         }
-        final XmlEmployee that = ((XmlEmployee)object);
+        final XmlEmployee that = ((XmlEmployee) object);
         {
             String lhsFirstName;
             lhsFirstName = this.getFirstName();
             String rhsFirstName;
             rhsFirstName = that.getFirstName();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "firstName", lhsFirstName), LocatorUtils.property(thatLocator, "firstName", rhsFirstName), lhsFirstName, rhsFirstName, (this.firstName != null), (that.firstName != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "firstName", lhsFirstName), LocatorUtils.property(thatLocator, "firstName", rhsFirstName), lhsFirstName, rhsFirstName, (this.firstName!= null), (that.firstName!= null))) {
                 return false;
             }
         }
@@ -163,7 +194,7 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
             lhsLastName = this.getLastName();
             String rhsLastName;
             rhsLastName = that.getLastName();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "lastName", lhsLastName), LocatorUtils.property(thatLocator, "lastName", rhsLastName), lhsLastName, rhsLastName, (this.lastName != null), (that.lastName != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "lastName", lhsLastName), LocatorUtils.property(thatLocator, "lastName", rhsLastName), lhsLastName, rhsLastName, (this.lastName!= null), (that.lastName!= null))) {
                 return false;
             }
         }
@@ -172,7 +203,7 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
             lhsAddress = this.getAddress();
             Address rhsAddress;
             rhsAddress = that.getAddress();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "address", lhsAddress), LocatorUtils.property(thatLocator, "address", rhsAddress), lhsAddress, rhsAddress, (this.address != null), (that.address != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "address", lhsAddress), LocatorUtils.property(thatLocator, "address", rhsAddress), lhsAddress, rhsAddress, (this.address!= null), (that.address!= null))) {
                 return false;
             }
         }
@@ -181,7 +212,7 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
             lhsPosition = this.getPosition();
             String rhsPosition;
             rhsPosition = that.getPosition();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "position", lhsPosition), LocatorUtils.property(thatLocator, "position", rhsPosition), lhsPosition, rhsPosition, (this.position != null), (that.position != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "position", lhsPosition), LocatorUtils.property(thatLocator, "position", rhsPosition), lhsPosition, rhsPosition, (this.position!= null), (that.position!= null))) {
                 return false;
             }
         }
@@ -198,22 +229,22 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
         {
             String theFirstName;
             theFirstName = this.getFirstName();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firstName", theFirstName), currentHashCode, theFirstName, (this.firstName != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "firstName", theFirstName), currentHashCode, theFirstName, (this.firstName!= null));
         }
         {
             String theLastName;
             theLastName = this.getLastName();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "lastName", theLastName), currentHashCode, theLastName, (this.lastName != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "lastName", theLastName), currentHashCode, theLastName, (this.lastName!= null));
         }
         {
             Address theAddress;
             theAddress = this.getAddress();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address", theAddress), currentHashCode, theAddress, (this.address != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "address", theAddress), currentHashCode, theAddress, (this.address!= null));
         }
         {
             String thePosition;
             thePosition = this.getPosition();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "position", thePosition), currentHashCode, thePosition, (this.position != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "position", thePosition), currentHashCode, thePosition, (this.position!= null));
         }
         return currentHashCode;
     }
@@ -241,22 +272,22 @@ public class XmlEmployee implements Equals2, HashCode2, ToString2 {
         {
             String theFirstName;
             theFirstName = this.getFirstName();
-            strategy.appendField(locator, this, "firstName", buffer, theFirstName, (this.firstName != null));
+            strategy.appendField(locator, this, "firstName", buffer, theFirstName, (this.firstName!= null));
         }
         {
             String theLastName;
             theLastName = this.getLastName();
-            strategy.appendField(locator, this, "lastName", buffer, theLastName, (this.lastName != null));
+            strategy.appendField(locator, this, "lastName", buffer, theLastName, (this.lastName!= null));
         }
         {
             Address theAddress;
             theAddress = this.getAddress();
-            strategy.appendField(locator, this, "address", buffer, theAddress, (this.address != null));
+            strategy.appendField(locator, this, "address", buffer, theAddress, (this.address!= null));
         }
         {
             String thePosition;
             thePosition = this.getPosition();
-            strategy.appendField(locator, this, "position", buffer, thePosition, (this.position != null));
+            strategy.appendField(locator, this, "position", buffer, thePosition, (this.position!= null));
         }
         return buffer;
     }

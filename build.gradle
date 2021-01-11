@@ -21,6 +21,11 @@ allprojects {
   repositories {
     mavenCentral()
   }
+  //Delete IDEA build dirs too
+  clean {
+    delete "$projectDir/out"
+    delete "$projectDir/data"
+  }
 }
 
 wrapper {

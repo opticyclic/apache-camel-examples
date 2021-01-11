@@ -1,17 +1,28 @@
+
 package com.github.opticyclic.camel.model;
 
-import javax.xml.bind.annotation.*;
-
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import com.github.opticyclic.xml.SimpleToStringStrategy;
-import org.jvnet.jaxb2_commons.lang.*;
+import org.jvnet.jaxb2_commons.lang.Equals2;
+import org.jvnet.jaxb2_commons.lang.EqualsStrategy2;
+import org.jvnet.jaxb2_commons.lang.HashCode2;
+import org.jvnet.jaxb2_commons.lang.HashCodeStrategy2;
+import org.jvnet.jaxb2_commons.lang.JAXBEqualsStrategy;
+import org.jvnet.jaxb2_commons.lang.JAXBHashCodeStrategy;
+import org.jvnet.jaxb2_commons.lang.ToString2;
+import org.jvnet.jaxb2_commons.lang.ToStringStrategy2;
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
+
 /**
  * <p>Java class for anonymous complex type.
- *
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- *
+ * 
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -28,17 +39,20 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-  "addressLine1",
-  "addressLine2",
-  "city",
-  "state",
-  "postalCode",
-  "country"
+    "addressLine1",
+    "addressLine2",
+    "city",
+    "state",
+    "postalCode",
+    "country"
 })
-public class Address implements Equals2, HashCode2, ToString2 {
+public class Address implements Equals2, HashCode2, ToString2
+{
 
     @XmlElement(required = true)
     protected String addressLine1;
@@ -55,9 +69,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the addressLine1 property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAddressLine1() {
         return addressLine1;
@@ -65,9 +81,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the addressLine1 property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAddressLine1(String value) {
         this.addressLine1 = value;
@@ -75,9 +93,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the addressLine2 property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAddressLine2() {
         return addressLine2;
@@ -85,9 +105,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the addressLine2 property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAddressLine2(String value) {
         this.addressLine2 = value;
@@ -95,9 +117,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the city property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCity() {
         return city;
@@ -105,9 +129,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the city property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCity(String value) {
         this.city = value;
@@ -115,9 +141,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the state property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getState() {
         return state;
@@ -125,9 +153,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the state property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setState(String value) {
         this.state = value;
@@ -135,9 +165,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the postalCode property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPostalCode() {
         return postalCode;
@@ -145,9 +177,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the postalCode property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setPostalCode(String value) {
         this.postalCode = value;
@@ -155,9 +189,11 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Gets the value of the country property.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCountry() {
         return country;
@@ -165,28 +201,30 @@ public class Address implements Equals2, HashCode2, ToString2 {
 
     /**
      * Sets the value of the country property.
-     *
-     * @param value allowed object is
-     * {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCountry(String value) {
         this.country = value;
     }
 
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
-        if((object == null) || (this.getClass() != object.getClass())) {
+        if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
         }
-        if(this == object) {
+        if (this == object) {
             return true;
         }
-        final Address that = ((Address)object);
+        final Address that = ((Address) object);
         {
             String lhsAddressLine1;
             lhsAddressLine1 = this.getAddressLine1();
             String rhsAddressLine1;
             rhsAddressLine1 = that.getAddressLine1();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "addressLine1", lhsAddressLine1), LocatorUtils.property(thatLocator, "addressLine1", rhsAddressLine1), lhsAddressLine1, rhsAddressLine1, (this.addressLine1 != null), (that.addressLine1 != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "addressLine1", lhsAddressLine1), LocatorUtils.property(thatLocator, "addressLine1", rhsAddressLine1), lhsAddressLine1, rhsAddressLine1, (this.addressLine1 != null), (that.addressLine1 != null))) {
                 return false;
             }
         }
@@ -195,7 +233,7 @@ public class Address implements Equals2, HashCode2, ToString2 {
             lhsAddressLine2 = this.getAddressLine2();
             String rhsAddressLine2;
             rhsAddressLine2 = that.getAddressLine2();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "addressLine2", lhsAddressLine2), LocatorUtils.property(thatLocator, "addressLine2", rhsAddressLine2), lhsAddressLine2, rhsAddressLine2, (this.addressLine2 != null), (that.addressLine2 != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "addressLine2", lhsAddressLine2), LocatorUtils.property(thatLocator, "addressLine2", rhsAddressLine2), lhsAddressLine2, rhsAddressLine2, (this.addressLine2 != null), (that.addressLine2 != null))) {
                 return false;
             }
         }
@@ -204,7 +242,7 @@ public class Address implements Equals2, HashCode2, ToString2 {
             lhsCity = this.getCity();
             String rhsCity;
             rhsCity = that.getCity();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity), LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity, (this.city != null), (that.city != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "city", lhsCity), LocatorUtils.property(thatLocator, "city", rhsCity), lhsCity, rhsCity, (this.city!= null), (that.city!= null))) {
                 return false;
             }
         }
@@ -213,7 +251,7 @@ public class Address implements Equals2, HashCode2, ToString2 {
             lhsState = this.getState();
             String rhsState;
             rhsState = that.getState();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState), LocatorUtils.property(thatLocator, "state", rhsState), lhsState, rhsState, (this.state != null), (that.state != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "state", lhsState), LocatorUtils.property(thatLocator, "state", rhsState), lhsState, rhsState, (this.state!= null), (that.state!= null))) {
                 return false;
             }
         }
@@ -222,7 +260,7 @@ public class Address implements Equals2, HashCode2, ToString2 {
             lhsPostalCode = this.getPostalCode();
             String rhsPostalCode;
             rhsPostalCode = that.getPostalCode();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "postalCode", lhsPostalCode), LocatorUtils.property(thatLocator, "postalCode", rhsPostalCode), lhsPostalCode, rhsPostalCode, (this.postalCode != null), (that.postalCode != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "postalCode", lhsPostalCode), LocatorUtils.property(thatLocator, "postalCode", rhsPostalCode), lhsPostalCode, rhsPostalCode, (this.postalCode!= null), (that.postalCode!= null))) {
                 return false;
             }
         }
@@ -231,7 +269,7 @@ public class Address implements Equals2, HashCode2, ToString2 {
             lhsCountry = this.getCountry();
             String rhsCountry;
             rhsCountry = that.getCountry();
-            if(!strategy.equals(LocatorUtils.property(thisLocator, "country", lhsCountry), LocatorUtils.property(thatLocator, "country", rhsCountry), lhsCountry, rhsCountry, (this.country != null), (that.country != null))) {
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "country", lhsCountry), LocatorUtils.property(thatLocator, "country", rhsCountry), lhsCountry, rhsCountry, (this.country!= null), (that.country!= null))) {
                 return false;
             }
         }
@@ -258,22 +296,22 @@ public class Address implements Equals2, HashCode2, ToString2 {
         {
             String theCity;
             theCity = this.getCity();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode, theCity, (this.city != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "city", theCity), currentHashCode, theCity, (this.city!= null));
         }
         {
             String theState;
             theState = this.getState();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode, theState, (this.state != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "state", theState), currentHashCode, theState, (this.state!= null));
         }
         {
             String thePostalCode;
             thePostalCode = this.getPostalCode();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "postalCode", thePostalCode), currentHashCode, thePostalCode, (this.postalCode != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "postalCode", thePostalCode), currentHashCode, thePostalCode, (this.postalCode!= null));
         }
         {
             String theCountry;
             theCountry = this.getCountry();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "country", theCountry), currentHashCode, theCountry, (this.country != null));
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "country", theCountry), currentHashCode, theCountry, (this.country!= null));
         }
         return currentHashCode;
     }
@@ -311,22 +349,22 @@ public class Address implements Equals2, HashCode2, ToString2 {
         {
             String theCity;
             theCity = this.getCity();
-            strategy.appendField(locator, this, "city", buffer, theCity, (this.city != null));
+            strategy.appendField(locator, this, "city", buffer, theCity, (this.city!= null));
         }
         {
             String theState;
             theState = this.getState();
-            strategy.appendField(locator, this, "state", buffer, theState, (this.state != null));
+            strategy.appendField(locator, this, "state", buffer, theState, (this.state!= null));
         }
         {
             String thePostalCode;
             thePostalCode = this.getPostalCode();
-            strategy.appendField(locator, this, "postalCode", buffer, thePostalCode, (this.postalCode != null));
+            strategy.appendField(locator, this, "postalCode", buffer, thePostalCode, (this.postalCode!= null));
         }
         {
             String theCountry;
             theCountry = this.getCountry();
-            strategy.appendField(locator, this, "country", buffer, theCountry, (this.country != null));
+            strategy.appendField(locator, this, "country", buffer, theCountry, (this.country!= null));
         }
         return buffer;
     }
