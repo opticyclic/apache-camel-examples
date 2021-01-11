@@ -37,7 +37,8 @@ public class CsvToXmlTest extends CamelTestSupport {
           .split(body())
           .process(new ProcessEmployee())
           .marshal(jaxbDataFormat)
-          .log("\n#####\nTransformed XML: \n${body}\n#####\n");
+          .log("\n#####\nTransformed XML: \n${body}\n#####\n")
+          .to("file:" + new File("data").getAbsolutePath());
 
       }
     };

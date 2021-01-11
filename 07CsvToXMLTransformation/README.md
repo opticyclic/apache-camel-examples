@@ -9,3 +9,4 @@ The `CsvToXmlTest` reads the `employee.csv` and converts it to an XML file per r
 * Camel then *splits* and iterates over each item in the list (row).
 * The processor converts the POJO to the JAXB object
 * The JAXB object is marshalled to XML
+* The XML is logged and also output as a file in the `data` directory
